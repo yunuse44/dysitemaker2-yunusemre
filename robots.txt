@@ -1,0 +1,11 @@
+
+User-agent: *
+Disallow: /kdosya/
+Disallow: /yt/
+Disallow: /umut_d/
+Disallow: /umut/
+Disallow: /srs/
+Disallow: /dysitemaker/
+Disallow: /web/
+Disallow: /yükle/
+Disallow: /chat/

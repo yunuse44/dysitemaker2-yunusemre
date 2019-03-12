@@ -1,0 +1,40 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+ if ( empty($adi or $sifre)) {
+        exit();
+} else {
+
+
+
+  if (empty($_SESSION['adi'] and $_SESSION['şifre'])) {
+      echo '</br>hatalı  deneme</br>';
+      exit();
+  } else {
+echo "</br> giriş yaptin sayın:" . $_SESSION['adi'];
+ echo '   <script type="text/javascript">   document.getElementById("gpaneli").style.display="none";</script>';
+  }
+  }
+
+      echo "</br> giriş yaptin sayın:" . $_SESSION['adi'];
+ echo '   <script type="text/javascript">   document.getElementById("gpaneli").style.display="none";</script>';
+
+
+
+}
+
+
+
+$sql='SELECT  linkler.id,yorumlar.sid,yorumlar.adi,yorumlar.yorum  FROM linkler,yorumlar WHERE linkler.id='.$yorum.' && yorumlar.sid=linkler.id ';
+$sorgu =  mysqli_query($this->icon, $sql) or die(mysqli_error());
+
+
+while ( $satır=mysqli_fetch_row($sorgu)){
+      echo '<div class="yorumlar"><span> '.$satır[2].'</span> <p> '.$$satır[3].'</p> </div>';
+   }
+?>
