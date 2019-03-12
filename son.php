@@ -32,5 +32,6 @@ if(!$phpmailer->send()) {
 }
 
 echo 'Mail gonderildi.';
+// sayfa  kodunda  hata  var
 //echo error_reporting();
 ?>
