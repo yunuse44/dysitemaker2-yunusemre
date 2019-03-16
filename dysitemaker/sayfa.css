@@ -27,12 +27,12 @@ margin-top: 100px;
     margin: 5px;
     border: none;
     height: 31px;
-    margin-left: 1px;
+    /*! margin-left: 1px; */
     padding-left: 50px;
     
     color: #090707;
     font-size: large;
-    border-bottom: solid 2px #157efb;
+    border-bottom: solid 2px #b1bece;
 }
 
 .gpaneli img {
@@ -96,17 +96,19 @@ background: white;
    border-top:   solid whitesmoke 5px;
   border-radius: none;
 
+cursor: pointer;
 }
 
 .men{
 width: 100%;
 color: #000;
-background-color: #093972;
+background-color: #8a8a8a;
 margin-right: 10px;
-top: 10px;
 height: 100%;
 right: 0px;
 float: left;
+padding: 0px;
+margin: 0px;
 }
 #ihtml{
     float: left;
@@ -713,7 +715,7 @@ background-color: #F0F0F0;
     
     height: 25px;
     float: left;
-    background: linear-gradient(45deg, #656565 70%,#fff 31%);
+    background: linear-gradient(45deg, #e4e4e4 70%,#a3a7ab 31%);
     
     padding: 5px;
     /*! padding-right: 60%; */
@@ -730,7 +732,7 @@ background-color: #F0F0F0;
 }
 .slink a {
   text-decoration: none;
-    color:#0c0c0c;
+    color:#570000;
 }
 .slink div {
     float: right;

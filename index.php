@@ -21,7 +21,7 @@ include_once 'dysitemaker/list.php';
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="ana.js" type="text/javascript"></script>
 
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="bildirim" id="bd" ><h1>yunus emre  yeşilyurt</h1></div>
 <?php
   //  error_reporting(E_ALL);
@@ -61,7 +61,7 @@ ob_flush();
 <body>
   <div class="ps">  </div>
   <div class="pano" id="pano">
-  <div>  <span>Duyuru</span></div>
+  <div class="dy">  <span>Duyuru</span></div>
 
     <b>YUNUS EMRE  YEŞİLYURT</b></br>
 
@@ -69,18 +69,8 @@ Web  sayfasına   hoş  geldiniz.</br>
 Bu  sayfa   kişisel  bilgilerin  yanı  sıra  yaptım  örnekler
 ve   programlama  ait  bilgiler  olacak  .  </br>
 Mümkün  olduğu   sürece  güncel  tutmaya  çalışacağım  . </br>
- iyi  günler
- <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+ iyi  günler</br>
+  <div class="date">  <span><b><?php echo date('d.m.Y H:i:s');?></b></span></div>
     </div>
 
     <?php  if(empty($yeni->seo[5])){    } else {

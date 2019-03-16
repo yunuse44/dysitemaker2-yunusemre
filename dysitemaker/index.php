@@ -14,12 +14,13 @@
  * and open the template in the editor.
  */
 // error_reporting(E_ALL);
-// ini_set("display_errors", 1);
+//ini_set("display_errors", 1);
 include_once 'con.php';
 include 'işlemler.php';
 
 ?>
      <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Poiret+One" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script type="text/javascript" >
 function mobilkontrol() {
 if( navigator.userAgent.match(/Android/i)
@@ -110,8 +111,8 @@ document.write(' <link href="sayfa.css" rel="stylesheet" type="text/css"/>');
              </br>              </br>
 </br></br>
 
-                <b>Kaldığınız  Yerden Devam Edin</br> </br><input type="button" value="DÜZENLE"  id="duzenle"/>   <div id="ogoster">  <div><span style="background: none;">YENİ PROJE</span><b >x</b></div> <form action="index.php?id=oluştur" method="POST">
-                  Proje adı : <input id="adı" type="text" name="dadı">  <input type="submit" value="olustur" id="tm"  /> </form> </div>
+                <b>Kaldığınız  Yerden Devam Edin</b></br> </br><input type="button" value="DÜZENLE"  id="duzenle"/>   <div id="ogoster">  <div><span style="background: none;">YENİ PROJE</span><b >x</b></div> <form action="index.php?id=oluştur" method="POST">
+                  Proje adı :<input id="adı" type="text" name="dadı">  <input type="submit" value="olustur" id="tm"  /> </form> </div>
             <div id="listele"> <div><span>Projelerim</span><b >x</b></div>
                 <?php $dt->dlist() ?></div>
         </div>
@@ -352,9 +353,34 @@ $isim=$_POST["dadı"];
 
 }
 
+/*function ymen($yv){
+  //echo "menü listesi:<b>".$dt->gst."</b></br>";
+  echo '<div class="men">' ;
+   $dt->conarray=array($host,$user,$password,$yv,"SHOW TABLES FROM $yv") or die("hata  oluştu");
+     echo "menü listesi:<b>".print_r($dt->conarray)."</b></br>";
+   $dt->tliste();
+         echo '<li id="scopy" class="ls"  onclick="xcopy(this.id)" www="+-+*+'.$yv.'">yayınla</li> ';
+          echo '<li  class="ls"   onclick="ot_kpt()" style="padding:2px;"> <img src="../srs/kkilit.svg" width="40"/></li> ';
+  echo '</div>';
+  $mn= explode("+", $dt->gst);
+  var_dump($mn);
+
+  for($i=1;$i<count($mn);$i++)
+  {
+     // echo "<b>".$mn[$i].'</b></br>';
+                 echo '<div class="link" id="'.$mn[$i].'1">';
+    $dt->sduzenle($dv,"select  * from ".$mn[$i],$mn[$i]);
+    echo '</div>';
+  }
+
+}
+*/
+
+
+
 $d=$_GET["düzenle"];
       if(!$d==""){
-          //echo 'dosya adi:'.$d.'</br>';
+        //  echo 'dosya adi:'.$d.'</br>';
 
            echo '   <script type="text/javascript">  '
           . ' document.getElementById("ana").style.display="none";'
@@ -363,26 +389,36 @@ $d=$_GET["düzenle"];
                    . '  document.getElementById("hs").style.display="none";'
 
                    . '</script> ';
-echo '<div class="men">' ;
- $dt->conarray=array($host,$user,$password,$d,"SHOW TABLES FROM $d");
- $dt->tliste();
-       echo '<li id="scopy" class="ls"  onclick="xcopy(this.id)" www="+-+*+'.$d.'">yayınla</li> ';
-        echo '<li  class="ls"   onclick="ot_kpt()" style="padding:2px;"> <img src="../srs/kkilit.svg" width="40"/></li> ';
-echo '</div>';
-$mn= explode("+", $dt->gst);
-//var_dump($mn);
 
-for($i=1;$i<count($mn);$i++)
-{
-   // echo "<b>".$mn[$i].'</b></br>';
-               echo '<div class="link" id="'.$mn[$i].'1">';
-  $dt->sduzenle($d,"select  * from ".$mn[$i],$mn[$i]);
-  echo '</div>';
-}
+
+                   echo '<div class="men">' ;
+                    $dt->conarray=array($host,$user,$password,$d,"SHOW TABLES FROM $d");
+                    $dt->tliste();
+                          echo '<li id="scopy" class="ls"  onclick="art()" www="+-+*+'.$d.'">yayınla</li> ';
+                           echo '<li  class="ls"   onclick="ot_kpt()" style="padding:2px;"> <img src="../srs/kkilit.svg" width="40"/></li> ';
+                   echo '</div>';
+                   $mn= explode("+", $dt->gst);
+                //   var_dump($mn);
+
+                   for($i=1;$i<count($mn);$i++)
+                   {
+                      // echo "<b>".$mn[$i].'</b></br>';
+                                  echo '<div class="link" id="'.$mn[$i].'1">';
+                     $dt->sduzenle($d,"select  * from ".$mn[$i],$mn[$i]);
+                     echo '</div>';
+                   }
+
+
+
+
    }
 $sduz=$_GET["sduzenle"];
     if(!$sduz==""){
       //    echo 'dosya adi:'.$sduz.'</br>';
+
+
+
+
 
            echo '   <script type="text/javascript">  '
           . ' document.getElementById("ana").style.display="none";'
@@ -548,7 +584,10 @@ xhttp.onreadystatechange = function() {
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
  xhttp.send(yveri);
 }
+function art(){
+alert("şuan  pasif  yaptım");
 
+}
 
      function ot_kpt(){
 
@@ -569,7 +608,8 @@ xhttp.onreadystatechange = function() {
   plugins: 'print preview fullpage searchreplace autolink directionality autosave code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount  spellchecker imagetools media  link contextmenu colorpicker textpattern ',
   toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat | code | fullscreen ',
   image_advtab: true,
-    extended_valid_elements : 'a[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name |onclick]',
+
+ extended_valid_elements : 'a[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name |onclick],input[type|value|name|id|onclick|placeholder|button|class]',
   templates: [
     { title: 'Test template 1', content: 'Test 1' },
     { title: 'Test template 2', content: 'Test 2' }

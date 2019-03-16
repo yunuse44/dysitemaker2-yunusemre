@@ -47,10 +47,11 @@ function render(frm,tablo){
   //alert(tablo);
     var  yt="";
   var a=document.getElementById(frm).children;
-//  alert(a);
+alert(a.length);
   for (var i = 0; i < a.length; i++) {
     var yn=a[i].name;
-    var ny=a[i].value;
+        var ny=a[i].value;
+      //  alert(ny);
 if (a[i].value=="") {
   document.getElementById("pano").style.display="block";
     document.getElementById("pano").innerHTML="boş  alanları  doldurun ";

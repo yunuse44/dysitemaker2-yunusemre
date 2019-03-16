@@ -167,7 +167,7 @@ $sy=count($bs);
 
           while ( $satır= mysqli_fetch_array($sorgu)){
 
-              if($satır[0]=="information_schema"||$satır[0]=="maker"  ||$satır[0]=="mysql" ||$satır[0]=="phpmyadmin" || $satır[0]=="performance_schema"){                  continue;}
+              if($satır[0]=="information_schema"||$satır[0]=="maker"  ||$satır[0]=="mysql" ||$satır[0]=="phpmyadmin" || $satır[0]=="performance_schema" || $satır[0]=="yemreyes_sendeeal"){                  continue;}
 
    echo '<li><a href="index.php?düzenle='.$satır[0].'">'.$satır[0]."</a>";
 

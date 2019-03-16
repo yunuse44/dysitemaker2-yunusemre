@@ -5,8 +5,10 @@ include("dysitemaker/list.php");
 include("class.phpmailer.php");
 
 $tab=$_GET["t"];
+echo "<b>$tab</b>";
  $yeni->conarray=array($host,$user,$password,$database);
 $yeni->u_ekle($tab);
+/*
 header('Content-Type: text/html; charset=utf-8');
 
 $phpmailer = new PHPMailer;
@@ -33,5 +35,6 @@ if(!$phpmailer->send()) {
 
 echo 'Mail gonderildi.';
 // sayfa  kodunda  hata  var
-//echo error_reporting();
+//echo error_reporting();/*
+s
 ?>

@@ -33,6 +33,7 @@ float: left;
 	float: left;
 	/*! background-color: #a3aebf; */
 	/*! position: inherit; */
+	margin-top: 15px;
 }
 
 #alt1 {
@@ -293,11 +294,10 @@ cursor:pointer;
 
 
 	float: left;
-	width: 43%;
+	width: 22%;
 	margin: 0px;
-	color: #0e4eaa;
-	text-shadow: 1px -6px 3px #565454;
-	text-transform: full-width;
+	background-color: #0e4eaa;
+	color: white;
 }
 .men1 h1 {
   margin: 0px;
@@ -439,7 +439,7 @@ cursor:pointer;
 .pano  {
 width: 372px;
 position: absolute;
-top: 191px;
+top: 174px;
 left: 987px;
 z-index: 10;
 color: #000;
