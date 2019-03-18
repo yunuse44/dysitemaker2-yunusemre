@@ -315,7 +315,7 @@ cursor:pointer;
   width: 651px;
   display: block;
   overflow: hidden;
-  background: linear-gradient(120deg, rgb(75, 74, 73) 91%, #f8890e00 30%);
+  background: linear-gradient(120deg, rgb(14, 78, 170) 91%, #f8890e00 30%);
   position: absolute;
   top: 112px;
   left: 831px;
@@ -350,7 +350,7 @@ cursor:pointer;
   z-index: 99;
   height: 100%;
   float: left;
-  background-color: #e68f0e;
+  background-color: #0e4eaa;
 }
 .sag li {
   list-style: none;
@@ -540,7 +540,7 @@ left: 0px;
   float: left;
 padding: 14px;
 width: 89%;
-background-color: #0e4eaa;
+background-color: #0f2442;
 margin-bottom: 0px;
 margin-left: -10px;
   color: white;
