@@ -185,23 +185,24 @@ echo '<div class="yorumlar"><b>yorumlar</b>';
           }
 
                function u_ekle($tablo){
-                echo "</br><b>tablo adı:".$tablo."</b></br>";
+              //  echo "</br><b>tablo adı:".$tablo."</b></br>";
 $s=0;
                    foreach($_POST as $key => $value ){
-              //  echo "name adı:".$key."= değeri:".$value;
+            //   echo "name adı:".$key."= değeri:".$value;
                 $deg[$s]="'".$value."',";
                 $s++;
                }
 
 
-//  mysqli_close($this->icon);
+ //mysqli_close($this->icon);
+ //print_r($this->conarray);
           $this->icon= mysqli_connect($this->conarray[0],$this->conarray[1],$this->conarray[2],$this->conarray[3]) or die(mysqli_error());
             mysqli_query($this->icon, "SET NAMES 'utf8'");
               mysqli_query($this->icon, "SET CHARACTER SET lutf8'");
                 mysqli_query($this->icon,"SET COLLATION_CONNECTION = 'utf8_turkish_ci'" );
 
           $sql='select * from '.$tablo;
-            echo "</br>sorgu:". $sql;
+        //    echo "</br>sorgu:". $sql;
 
 
                             $sorgu =  mysqli_query($this->icon, $sql) or die("hata  oluştu");
@@ -236,7 +237,7 @@ $sn2=substr($sn2, 0, $su);
 //echo "birinci  değerler:".$sn1."</br>";
 //echo "ikinci sütün  adaları:".$sn2."</br>";
 $sql="insert into "."`".$tablo."`"."(".$sn2.") values (".$sn1.")";
-echo "</br>sql  sorgusu: </br>".$sql;
+//echo "</br>sql  sorgusu: </br>".$sql;
 //   echo "</b></b>";
 mysqli_query($this->icon,$sql ) or die(mysqli_error($this->icon)) ;
 

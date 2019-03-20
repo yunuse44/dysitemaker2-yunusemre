@@ -44,14 +44,14 @@ document.write(' <link href="ana.css" rel="stylesheet" type="text/css"/>');
 
 
 function render(frm,tablo){
-  //alert(tablo);
+  alert(tablo);
     var  yt="";
   var a=document.getElementById(frm).children;
 alert(a.length);
   for (var i = 0; i < a.length; i++) {
     var yn=a[i].name;
         var ny=a[i].value;
-      //  alert(ny);
+
 if (a[i].value=="") {
   document.getElementById("pano").style.display="block";
     document.getElementById("pano").innerHTML="boş  alanları  doldurun ";
@@ -105,7 +105,7 @@ if (a[i].id=="pano" || a[i].id=="alt1" ) {
     var thtml='<div ><span >iteli yazabilirsiniz: </span> </div>'+
     '<form id="i_gonder"><input name="sid" type="hidden"  value="'+sayid.innerHTML+'" /> <input name="ad" type="text" placeholder="adınızı  girin:" /> ' +
   '  <input name="eposta" type="text" placeholder="mail  adresi giriniz" />     <textarea style="width: 96%;" name="yorum" rows="10" placeholder="mesajınız  ekleyin"></textarea> '+
-  '<button type="button" id="olay">gönder</button> </form>';
+  ' </form><button type="button" id="olay" class="btn btn-outline-primary">gönder</button>';
 
   document.getElementById("pano").style.display="block";
 
@@ -117,6 +117,7 @@ if (a[i].id=="pano" || a[i].id=="alt1" ) {
   document.getElementById("olay").setAttribute('onclick', "render('i_gonder','yorumlar')");
 
 }
+/*  contains elementin içini  kontorol  render
 function onyukleme(){
 var foo = document.getElementById('etiket');
 var by = document.body.contains(foo);
@@ -126,4 +127,4 @@ if (by === false) {
 document.getElementById("pano").style.top="102px";
 
 }
-}
+}*/

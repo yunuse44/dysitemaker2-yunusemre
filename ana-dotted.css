@@ -32,7 +32,9 @@ float: left;
 	height: auto;
 	float: left;
 	/*! background-color: #a3aebf; */
-	/*! position: inherit; */
+	position: absolute;
+	top: 40px;
+	left: 840px;
 }
 
 #alt1 {
@@ -48,9 +50,9 @@ float: left;
 	padding-bottom: 40px;
 	position: relative;
 	margin-left: 20px;
-	border: dashed red 2px;
+	/*! border: dashed red 2px; */
 	border-radius: 20px;
-	margin-top: -10px;
+	margin-top: 3px;
 	border-top: none;
 }
 #a_men {
@@ -153,17 +155,19 @@ font-weight: bold;
 float: left;
 padding-top: 13px;
 padding-bottom: 12px;
-padding-left: 20px;
+padding-left: 15px;
 list-style: none;
 		/*! border-radius: 0px 50px 50px 0px; */
-		margin-left: 5px;
+		margin-left: 20px;
 		width: auto;
 		padding-right: 10px;
 		margin-top: 10px;
-		border-bottom:solid #c61610 2px;
+		/*! border-bottom:dashed #b7b7b7 2px; */
 		text-align: right;
 /*! background-color: #f0f0f0; */
 margin-bottom: 10px;
+background-color: #f7f8f6;
+border-radius: 20px;
 }
 
 
@@ -187,7 +191,7 @@ margin-bottom: 10px;
 }
 .men1 li a , .yuvarlak li a , #kli li a {
 	text-decoration: none;
-	color: #e14f4f;
+	color: #051380;
 }
 .men1 li:hover,.yuvarlak li:hover ,#düst li:hover  , #kli li:hover{
 	list-style: inside;
@@ -321,9 +325,13 @@ cursor:pointer;
   overflow: hidden;
   /*! background: linear-gradient(120deg, rgb(14, 78, 170) 91%, #f8890e00 30%); */
   position: absolute;
-  top: 0px;
-  left: 831px;
+  top: 528px;
+  left: 891px;
   padding: 10px;
+  width: 340px;
+  border-radius: 0px 1px 10px 20px;
+  /*! border-top: none; */
+  background-color: #f1f4f5;
 }
 .yorumlar{
   float: left;
@@ -339,7 +347,7 @@ cursor:pointer;
   float: left;
   padding-right: 7px;
   /*! margin: 3px; */
-  color: #362c2c;
+  color: #77716a;
   font-size: larger;
   cursor: pointer;
 }
@@ -350,14 +358,14 @@ cursor:pointer;
 }
 .sag {
 
-  width: 1320px;
+  width: 100%;
   z-index: 99;
   height: 100%;
   float: left;
   /*! background-color: #0e4eaa; */
-  border: dashed #d5d5d5 4px;
+  border-bottom: dashed #d5d5d5 2px;
   border-radius: 50px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .sag li {
   list-style: none;
@@ -370,6 +378,7 @@ cursor:pointer;
   float: left;
   z-index: 99;
   /*! width: 154px; */
+  color: blue;
 }
 .sag li a {
  text-decoration: none;
@@ -380,7 +389,8 @@ cursor:pointer;
   /*! background-color: gray; */
   /*! border-top:solid 15px #d5d5d5; */
   /*! margin-top: -6px; */
-  background-color: #141212;
+  border-right: #9c9c9c dotted 2px;
+  margin-top: -5px;
 }
 #kli {
   width: 700px;
@@ -419,16 +429,16 @@ cursor:pointer;
   padding: 10px;
   /*! border-radius: none; */
   margin-bottom: 20px;
-  background-color: #5d5a5a;
-  color: white;
+  background-color: #f1f4f5;
+  color: #561616;
   font-size: medium;
 }
 #i_gonder textarea {
   border: none;
   padding-top: 24px;
   padding-left: 20px;
-  background-color: #5d5a5a;
-  color: white;
+  background-color: #f7f8f6;
+  color: #020101;
   font-size: medium;
 }
 .ps {
@@ -446,21 +456,21 @@ cursor:pointer;
 .pano  {
 width: 372px;
 position: absolute;
-top: 140px;
+top: 110px;
 left: 877px;
 z-index: 10;
 color: #000;
 
-  /*! border-top: solid #6b6b6b 19px; */
   font-family: 'Nanum Gothic Coding', monospace;
   padding: 10px;
   font-weight: lighter;
   display: block;
 /*! background: linear-gradient(20deg, rgb(213, 213, 213) 85%, #f8890e00 10%); */
 height: 400px;
-border: dashed gray 4px;
+/*! border: dashed gray 2px; */
 border-radius: 20px;
 border-top: none;
+background-color: #f7f8f6;
 }
 #pano2{
   top: 420px;
@@ -523,11 +533,11 @@ box-shadow: none;
 .dy span {
 
   float: left;
-padding: 14px;
-width: 83%;
+padding: 11px;
+width: auto;
 /*! background-color: #d5d5d5; */
 margin-bottom: 0px;
-  border: dashed gray 4px;
+  border: dashed #0540b9 1px;
   border-radius: 50px;
 }
 .pano #olay {
@@ -542,9 +552,8 @@ padding: 10px;
 position: inherit;
   width: 80%;
 float: left;
-bottom: 10px;
 left: 20px;
-border: dashed gray 4px;
+/*! border: dashed gray 4px; */
 border-radius: 30px;
 }
 
@@ -555,5 +564,5 @@ width: 89%;
 /*! background-color: #0f2442; */
 margin-bottom: 0px;
 margin-left: -10px;
-  color: #b73232;
+  color: #1e5b74;
 }

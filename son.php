@@ -1,11 +1,11 @@
 <?php
 
 include("dysitemaker/list.php");
-
-include("class.phpmailer.php");
+include("dysitemaker/con.php");
+//include("class.phpmailer.php");
 
 $tab=$_GET["t"];
-echo "<b>$tab</b>";
+//echo "<b>$tab</b>";
  $yeni->conarray=array($host,$user,$password,$database);
 $yeni->u_ekle($tab);
 /*
